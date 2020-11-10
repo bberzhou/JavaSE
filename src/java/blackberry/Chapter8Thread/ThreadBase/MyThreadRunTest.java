@@ -1,4 +1,4 @@
-package blackberry.Chapter8Thread;
+package blackberry.Chapter8Thread.ThreadBase;
 
 /**
  * @Description:
