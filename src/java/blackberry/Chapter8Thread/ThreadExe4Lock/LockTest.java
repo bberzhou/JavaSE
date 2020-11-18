@@ -25,6 +25,8 @@ public class LockTest {
      */
     public static void main (String[] args) {
         Window window = new Window ();
+
+        //  这里的三个线程是共用同一个Lock的
         Thread ta = new Thread (window);
         Thread tb = new Thread (window);
         Thread tc = new Thread (window);

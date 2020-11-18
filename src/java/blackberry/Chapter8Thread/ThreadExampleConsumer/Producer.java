@@ -16,10 +16,10 @@ public class Producer extends Thread{   //  生产者
 
     @Override
     public void run () {
-        System.out.println(Thread.currentThread ().getName ()+"：开始生产");
+        System.out.println(Thread.currentThread ().getName ()+"：开始生产产品...");
         while (true){
             try {
-                Thread.sleep (100);
+                Thread.sleep (10);
 
             }catch (InterruptedException e){
                 e.printStackTrace ();

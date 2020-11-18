@@ -7,6 +7,13 @@ package blackberry.Chapter8Thread.ThreadExeDeadLock;
  * Create By IntelliJ IDEA
  */
 public class DeadLock implements Runnable {
+    /**
+     *  死锁的理解：不同的线程分别占用对方需要的同步资源不放弃，
+     *              都在等待对方放弃自己需要的同步资源，就形成了线程的死锁。
+     *  说明：1）出现死锁后，不会出现异常，不会出现提示，只是所有的线程都处于阻塞状态，无法继续
+     *      2）在使用同步的时候，要避免出现死锁
+     *
+     */
     //  声明两个类的对象
     ClassA classA = new ClassA ();
     ClassB classB = new ClassB ();

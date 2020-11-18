@@ -16,10 +16,10 @@ public class Consumer extends Thread{   //  消费者
     //  重写run方法
     @Override
     public void run () {
-        System.out.println(Thread.currentThread ().getName ()+":开始产品....");
+        System.out.println(Thread.currentThread ().getName ()+":开始消费产品...");
         while (true){
             try {
-                Thread.sleep (100);
+                Thread.sleep (20);
             } catch (InterruptedException e) {
                 e.printStackTrace ();
             }

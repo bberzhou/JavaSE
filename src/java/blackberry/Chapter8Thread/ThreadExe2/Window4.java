@@ -13,7 +13,7 @@ public class Window4 extends Thread {
      * 关于同步方法的总结：
      * 1、同步方法仍然涉及到同步监视器，只是不需要我们显式的声明。
      * 2、非静态的同步方法，同步监视器是：this
-     * 静态的同步方法，同步监视器是：当前类本身
+     *    静态的同步方法，同步监视器是：当前类本身
      */
     private static int tickets = 100;
 

@@ -8,6 +8,7 @@ package blackberry.Chapter8Thread.ThreadExampleConsumer;
  */
 public class ProductTest {
     /**
+     * 线程通信的应用
      *  生产者消费者问题：经典例题：生产者/消费者
      *  生产者（Producer）将产品交给店员（Clerk），而消费者(consumer)从店员处取走产品，
      *  店员一次只能持有固定数量的产品(比如：20),如果生产者试图生产更多的产品，店员会叫生产者停一下，
@@ -30,6 +31,9 @@ public class ProductTest {
         //  线程二
         Consumer c1 = new Consumer (clerk);
         c1.setName ("消费者1");
+
+        p1.start ();
+        c1.start ();
 
 
     }
