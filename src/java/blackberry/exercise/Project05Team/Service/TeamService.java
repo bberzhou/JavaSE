@@ -82,10 +82,22 @@ public class TeamService {
         //  因为status是programmer类里面的属性，所以需要对对传入的对象e进行一个强转
         Programmer p = (Programmer) e;  // 强转
 //        p.getStatus ().getNAME ().equals ("BUSY");下面那样写更容易防止空指针
-        if ("BUSY".equals (p.getStatus ().getNAME ())) {
-            throw new TeamException ("已经是某团队的成员");
-        } else if ("VACATION".equals (p.getStatus ().getNAME ())) {
-            throw new TeamException ("该人员正在休假，无法添加");
+
+        //  这是不采用枚举类的写法
+//        if ("BUSY".equals (p.getStatus ().getNAME ())) {
+//            throw new TeamException ("已经是某团队的成员");
+//        } else if ("VACATION".equals (p.getStatus ().getNAME ())) {
+//            throw new TeamException ("该人员正在休假，无法添加");
+//        }
+
+
+        //  采用枚举类型写法
+        switch (p.getStatus ()) {
+            case BUSY:
+                throw new TeamException ("已经是某团队的成员");
+            case VOCATION:
+                throw new TeamException ("该人员正在休假，无法添加");
+
         }
 
         // 团队中至多只能有一名架构师
