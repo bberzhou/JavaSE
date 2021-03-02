@@ -1,5 +1,6 @@
 package blackberry.Chapter10EnumAndAnnotation.aboutAnnotation;
 
+import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
@@ -9,6 +10,7 @@ import java.lang.annotation.RetentionPolicy;
  * @date: 12/2/20 11:26
  * Create By IntelliJ IDEA
  */
+@Inherited
 @Retention (RetentionPolicy.RUNTIME)
 public @interface MyAnnotations {
     MyAnnotation[] value();

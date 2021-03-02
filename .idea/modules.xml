@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaSE.iml" filepath="$PROJECT_DIR$/JavaSE.iml" />
       <module fileurl="file://$PROJECT_DIR$/aboutMap/aboutMap.iml" filepath="$PROJECT_DIR$/aboutMap/aboutMap.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/中间件作业/client/client.iml" filepath="$USER_HOME$/Downloads/中间件作业/client/client.iml" />
+      <module fileurl="file://$USER_HOME$/Downloads/中间件作业/server/server.iml" filepath="$USER_HOME$/Downloads/中间件作业/server/server.iml" />
     </modules>
   </component>
 </project>
