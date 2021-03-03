@@ -18,6 +18,7 @@ public class Q1{
                     return;
                 }
             }
+            //  对数组进行从小到大排序
             for(int j=0; j<n-1; j++){
                 for(int k=j+1; k<n; k++){
                     if(a[j]>a[k]){
