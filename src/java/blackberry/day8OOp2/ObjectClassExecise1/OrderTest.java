@@ -1,6 +1,5 @@
 package blackberry.day8OOp2.ObjectClassExecise1;
 
-import com.sun.tools.corba.se.idl.constExpr.Or;
 
 /**
  * @Description: order测试类

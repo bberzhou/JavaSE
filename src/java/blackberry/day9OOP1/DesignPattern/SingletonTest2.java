@@ -1,6 +1,5 @@
 package blackberry.day9OOP1.DesignPattern;
 
-import com.sun.tools.corba.se.idl.constExpr.Or;
 
 /**
  * @Description: 单例模式之懒汉式
