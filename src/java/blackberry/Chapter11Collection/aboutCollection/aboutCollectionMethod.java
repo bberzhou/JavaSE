@@ -12,7 +12,7 @@ import java.util.Date;
  * @date: 12/2/20 20:46
  * Create By IntelliJ IDEA
  */
-public class aboutMethod {
+public class aboutCollectionMethod {
     /**
      *  一、集合框架的概述
      *      1、集合、数组都是对多个数据进行存储操作的结构，简称Java容器。此时的存储是内存的存储，不涉及数据库等
@@ -98,20 +98,4 @@ public class aboutMethod {
         col.addAll (collection);    //  直接添加一个集合进去，相当于添加多个对象
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
