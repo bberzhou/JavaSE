@@ -15,6 +15,7 @@ public class interfaceSet {
      *          具体实现类：
      *          ｜---HashSet：作为Set接口的主要实现类：线程不安全的，并且可以存储null值
      *              ｜---LinkedHashSet：是HashSet的子类，遍历其内部数据时，可以按照添加的顺序遍历
+     *
      *          ｜---TreeSet：底层是二叉树存储的（红黑树），是同一个类new的对象，可以按照对象的某些属性排序，对象排序接口：Comparable,Comparator
      *                  可以按照添加对象的指定属性，进行排序
      *
@@ -52,6 +53,13 @@ public class interfaceSet {
      *
      *
      *        hashSet底层就是：数组+链表的结构
+     *
+     *        1、Set接口中没有额外定义新的方法，使用的都是Collection里面声明过的方法，
+     *        2、要求：向Set中添加的数据其所在的类一定要重写hashCode()和 equals()方法
+     *          要求：重写的hashCode()和 equals()方法一定要保持一致性：即相同的对象必须具有相等的散列码
+     *              重写两个方法的小技巧：对象中用作equals()方法比较的filed,都应该用来计算hashcode
+     *
+     *
      *
      *
      */

@@ -45,7 +45,9 @@ public class aboutCollectionMethod {
      *                  ｜---ArrayList、LinkedList、Vector     具体实现类
      *
      *              ｜---Set接口：存储无序、不可重复的数据。
-     *                  ｜---HashSet、LinkedHashSet、TreeSet   具体实现类
+     *                  ｜---HashSet、
+     *                  LinkedHashSet、对于频繁的遍历操作，LinkedHashSet效率高于HashSet
+     *                  TreeSet   具体实现类
      *
      *     ｜--- Map接口：双列数据，保存具有映射关系的键值对（key-value）集合，   ---》类似函数 y = f(X)
      *                  ｜---HashMap、LinkedHashMap、TreeMap、Hashtable、Properties  具体实现类
