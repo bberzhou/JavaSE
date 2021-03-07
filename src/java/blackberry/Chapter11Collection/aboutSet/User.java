@@ -62,7 +62,7 @@ public class User implements Comparable{
 
     //重写User类的CompareTo()方法，按照姓名从小到大，字母A-Z，a-z，进行排序
 
-    //  见 LinkedHasSet里面第一个测试
+    //  见 TreeSet类里面第4个测试
 
 //    @Override
 //    public int compareTo(Object o) {
@@ -78,7 +78,7 @@ public class User implements Comparable{
 
 
     //  重写User类的CompareTo()方法，按照姓名从小到大，字母A-Z，a-z，进行排序,然后年龄再从小到大排列
-    //  见 LinkedHasSet里面第二个和第三个测试
+    //  见 TreeSet里面第5个和第6个测试
     @Override
     public int compareTo(Object o) {
         //  1、首先判断形参o是不是User类的实例对象
