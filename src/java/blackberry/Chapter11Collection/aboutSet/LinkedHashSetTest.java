@@ -19,6 +19,8 @@ public class LinkedHashSetTest {
      *
      *
      */
+
+    //  使用User类里面的按照姓名属性排序的方式
     @Test
     public void test() {
         Set set = new LinkedHashSet();
