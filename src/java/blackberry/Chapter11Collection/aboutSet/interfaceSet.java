@@ -28,6 +28,11 @@ public class interfaceSet {
      *          2、不可重复性：
      *              保证添加的元素按照equals()方法判断时候，不能返回true，即相同的元素的只能添加一个
      *
+     *            Set接口并不保证有序，而SortedSet接口则保证元素是有序的：
+     *
+     *              HashSet是无序的，因为它实现了Set接口，并没有实现SortedSet接口；
+     *              TreeSet是有序的，因为它实现了SortedSet接口。
+     *
      *
      *
      *      Set用于存储不重复的元素集合，它主要提供以下几个方法：

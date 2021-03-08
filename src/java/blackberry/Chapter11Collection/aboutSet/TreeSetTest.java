@@ -11,9 +11,14 @@ public class TreeSetTest {
      *      TreeSet之所以是有序的，是因为它实现了SortedSet接口
      *
      *      1.向TreeSet中添加的数据，要求是相同类的对象
-     *      2.两种排序方式：自然排序和定制排序
-     *          a:自然排序中，比较两个对象是否相同的标准为：compareTO()方法返回0，不再是equals()方法
-     *              treeSet里面不能放相同的数据
+     *      2.两种排序方式：自然排序（CompareTo）和定制排序(Comparator)
+     *      3、自然排序（实现CompareTo）中，比较两个对象是否相同的标准为：compareTO()方法返回0，不再是equals()方法，treeSet里面不能放相同的数据 。
+     *          使用TreeSet和使用TreeMap的要求一样，添加的元素必须正确实现Comparable接口，如果没有实现Comparable接口，那么创建TreeSet时必须传入一个Comparator对象
+     *          treeSet的底层是一个树形结构，二叉排序树。hashSet底层是一个红黑树的数据结构，不能放相同的数据。
+     *          b:定制排序（Comparator）
+     *      4.定制排序中，比较两个对象是否相同的标准为：compare()方法返回0不再是equals()方法
+     *
+     *
      */
     @Test
     public void test() {
@@ -143,5 +148,48 @@ public class TreeSetTest {
         //User{name='Mike', age=20}
         //User{name='KKK', age=35}
         //User{name='Jerry', age=44}
+    }
+
+
+    //  测试定制排序（comparator）
+    @Test
+    public void test7(){
+        // 重写compare()方法，按照年龄从小到大排序
+        Comparator comparator = new Comparator() {
+
+            @Override
+            public int compare(Object o1, Object o2) {
+                //  1、先判断两个形参是否为同一个类User的实例
+                if (o1 instanceof User && o2 instanceof User){
+                    User u1 = (User) o1;
+                    User u2 = (User) o2;
+                    return Integer.compare(u1.getAge(),u2.getAge());
+                }
+                else {
+                    throw new RuntimeException("输入的数不匹配");
+                }
+            }
+        };
+
+        //  重写了Comparator方法之后，再调用
+        TreeSet treeSet = new TreeSet(comparator);
+        treeSet.add(new User("Tom",45));
+        treeSet.add(new User("Jerry",44));
+        treeSet.add(new User("KKK",35));
+        treeSet.add(new User("Mike",20));
+        treeSet.add(new User("Mike",10));
+
+        Iterator iterator = treeSet.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+        //User{name='Mike', age=10}
+        //User{name='Mike', age=20}
+        //User{name='KKK', age=35}
+        //User{name='Jerry', age=44}
+        //User{name='Tom', age=45}
+        //这个就是按照User的age进行排序的，定制排序
+
+
     }
 }
