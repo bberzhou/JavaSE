@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class intro {
@@ -85,6 +86,23 @@ public class intro {
      *              threshold：临界值
      *
      *              JDK8
+     *              DEFAULT——INITIAL_CAPACITY:hashMap的默认容量是，16
+     *              DEFAULT_LOAD_FACTOR:hashMap的默认加载因子：0.75
+     *              threshold:扩容的临界值， = 容量* 填充因子16*0.75 =》12
+     *              TREEIFY_THRESHOLD:Bucket中链表的长度大于该默认值，转化为红黑树:8
+     *              MIN_TREEITF_CAPACITY ：桶中的node被树化时最小的hash表容量：64
+     *
+     *      四、LinkedHashMap的底层实现原理（了解）
+     *          源码中:
+     *                  static class Entry<K,V> extends HashMap.Node<K,V> {
+     *                      Entry<K,V> before, after;
+     *                      Entry(int hash, K key, V value, Node<K,V> next) {
+     *                      super(hash, key, value, next);
+     *                  }
+     *               }
+     *
+     *
+     *
      *
      *
      */
@@ -102,6 +120,28 @@ public class intro {
         //  将key为null得数据放入HashMap,没有报错
         map.put(null,123);
         map.put(null,null);
+
+    }
+
+
+    //  LinkedHashMap测试
+    @Test
+    public void test2(){
+        //  使用LinkedHashMap输出里面的元素
+
+//        Map map = new LinkedHashMap();
+//        map.put(123,"ABC");
+//        map.put(456,"FFF");
+//        map.put(555,"CC");
+//        System.out.println(map);
+        //  使用LinkedHashMap输出有序性的{123=ABC, 456=FFF, 555=CC}
+
+        Map map = new HashMap();
+        map.put(123,"ABC");
+        map.put(456,"FFF");
+        map.put(555,"CC");
+        System.out.println(map);
+        //  使用HashMap输出无序性的：{456=FFF, 123=ABC, 555=CC}
 
     }
 
