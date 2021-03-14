@@ -163,6 +163,7 @@ public class TreeSetTest {
                 if (o1 instanceof User && o2 instanceof User){
                     User u1 = (User) o1;
                     User u2 = (User) o2;
+                    //  直接判断两个对象的年龄大小
                     return Integer.compare(u1.getAge(),u2.getAge());
                 }
                 else {
