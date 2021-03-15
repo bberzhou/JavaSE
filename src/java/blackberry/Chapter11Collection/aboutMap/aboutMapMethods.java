@@ -183,10 +183,5 @@ public class aboutMapMethods {
         while (iterator2.hasNext()){
             System.out.println(iterator2.next());
         }
-
-
-
-
-
     }
 }
