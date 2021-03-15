@@ -2,13 +2,10 @@ package blackberry.Chapter11Collection;
 
 import org.junit.Test;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
-=======
 import javax.jnlp.ClipboardService;
 import java.util.ArrayList;
 import java.util.Arrays;
->>>>>>> origin/master
 import java.util.Collections;
 import java.util.List;
 
@@ -97,7 +94,9 @@ public class CollectionsUtilClass {
         //[123, 78, 322, 889]
 
 
-=======
+
+    }
+    /**
      * Collections工具类的使用:操作Collection、Map的工具类
      * <p>
      * 面试题：Collection和Collections的区别？
@@ -122,9 +121,8 @@ public class CollectionsUtilClass {
      * void copy(List dest, List src):将src中的内容复制到dest中
      * boolean replaceAll(List list, Object oldVal, Object newVal):使用新值替换list中指定的旧值
      */
-
     @Test
-    public void test () {
+    public void test2() {
         List list = new ArrayList ();
         list.add (123);
         list.add (566);
@@ -183,10 +181,10 @@ public class CollectionsUtilClass {
      *
      */
     @Test
-    public void test2(){
+    public void test4(){
         List list1 = new ArrayList ();
         List list = Collections.synchronizedList (list1);
         //  这样就可以把list1变成线程安全的了
->>>>>>> origin/master
+
     }
 }
