@@ -1,4 +1,4 @@
-package blackberry.Chapter11Collection.ListMethod;
+package blackberry.Chapter11Collection;
 
 import blackberry.Chapter11Collection.aboutSet.User;
 import org.junit.Test;
@@ -82,6 +82,21 @@ public class ChapterQ {
         //User{name='kk', age=20}=95
         //  排序之前，先将HashMap转换成list，然后调用Collections.sort(list ,)，按照指定的方式进行排序，
         //  因为这里是HashMap，所以获取value值进行排序时，需要
+
+    }
+
+    /**
+     *  问题：对一个Java源文件中的关键字进行计数操作
+     *      提示：Java源文件中的每一个单词，需要确定该单词是否是一个关键字，可以将所有的关键字保存在一个HashSet里面
+     *      再使用Contains()方法来测试
+     *
+     *     Enumeration:此接口是Iterator迭代器的“古老版本”
+     *
+     *
+     */
+    @Test
+    public void test4(){
+
 
     }
 }

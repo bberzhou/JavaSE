@@ -11,7 +11,6 @@ import java.util.List;
 
 public class CollectionsUtilClass {
     /**
-<<<<<<< HEAD
      *  Collections工具类（是一个操作Set、List、和Map等集合）的使用;
      *  Collections是JDK提供的工具类，同样位于java.util包中。
      *  它提供了一系列静态方法，能更方便地操作各种集合进行排序、查询和修改等操作，
