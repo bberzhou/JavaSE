@@ -12,7 +12,7 @@ import java.util.*;
  */
 public class IntroGeneric {
     /**
-     *  泛型：
+     *  泛型：泛型就是定义一种模板
      *  1、为什么要有泛型？
      *      类似标签<>
      *      集合容器类在设计阶段、声明阶段不能确定这个容器到底实际存的是什么类型的对象
@@ -79,17 +79,21 @@ public class IntroGeneric {
      *                  2)部分保留
      *                    class son4<T2> extends father<T1,T2>
      *
-     *
-     *
-     *
-     *
-     *
-     *
-     *
-     *
      *  4、泛型在继承上的使用
      *
      *  5、通配符的使用
+     *
+     *  Java的泛型是采用擦拭法实现的；
+     *
+     * 擦拭法决定了泛型<T>：
+     *
+     * 不能是基本类型，例如：int；
+     * 不能获取带泛型类型的Class，例如：Pair<String>.class；
+     * 不能判断带泛型类型的类型，例如：x instanceof Pair<String>；
+     * 不能实例化T类型，例如：new T()。
+     * 泛型方法要防止重复定义方法，例如：public boolean equals(T obj)；
+     *
+     * 子类可以获取父类的泛型类型<T>。
      */
 
     @Test
