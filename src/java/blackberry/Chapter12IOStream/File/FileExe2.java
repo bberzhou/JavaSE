@@ -1,4 +1,4 @@
-package blackberry.Chapter12IOStream;
+package blackberry.Chapter12IOStream.File;
 
 import java.io.File;
 

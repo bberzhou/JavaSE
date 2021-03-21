@@ -183,9 +183,19 @@ public class IntroGeneric {
             System.out.println("key="+key+","+"value="+value);
 
         }
-
-
-
     }
-
+    //  遍历key-value时，也可以使用，先获取keySet,然后遍历key，再利用get(object key)获取value值
+    @Test
+    public void test5(){
+        HashMap<String ,Integer> hashMap = new HashMap<>();
+        hashMap.put("CC",98);
+        hashMap.put("BB",48);
+        hashMap.put("C",90);
+        hashMap.put("fC",88);
+        Set<String> strings = hashMap.keySet();
+        for (String key :
+                strings) {
+            System.out.println(key+","+hashMap.get(key));
+        }
+    }
 }

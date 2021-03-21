@@ -1,4 +1,4 @@
-package blackberry.Chapter12IOStream;
+package blackberry.Chapter12IOStream.File;
 
 import org.junit.Test;
 
@@ -22,7 +22,7 @@ public class FileIntro1 {
      *                              如果此文件目录的上层目录不存在，也不创建
      *      public boolean mkdirs()：创建文件目录，如果上层文件目录不存在，就一并创建
      *  File类的删除功能
-     *      public boolean delete()：删除文件或者文件夹
+     *      public boolean delete()：删除文件或者文件夹,删除的时候要注意，如果该文件有子文件或者子目录就不能删除成功
      *
      *      删除的注意事项：
      *          Java中删除不走回收站，要删除一个文件目录，要注意该文件目录内不能包含文件或文件目录
