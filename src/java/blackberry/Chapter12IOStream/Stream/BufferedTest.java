@@ -172,4 +172,104 @@ public class BufferedTest {
         //  685- 213
     }
 
+    //--------------------------------------------------
+    /*
+            使用BufferedReader和BufferedWriter来实现文本文件的复制
+     */
+    @Test
+    public void testBufferedReaderBufferedWriter() throws IOException {
+        //  这是使用字节流需要创的问价
+//        //  1、造文件
+//        File srcFile = new File("");
+//        File destFile = new File("");
+//
+//        //  2、造节点流
+//        FileInputStream fis = new FileInputStream(srcFile);
+//        FileOutputStream fos = new FileOutputStream(destFile);
+//
+//        //  3、造缓冲流
+//        BufferedInputStream  bis = new BufferedInputStream(fis);
+//        BufferedOutputStream bos = new BufferedOutputStream(fos);
+//        BufferedInputStream bis = new BufferedInputStream(new FileInputStream(new File("")));
+//        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream( new File("")));
+
+
+
+
+
+        //  下面是使用BufferedReader和BufferedWriter
+//        //  1、造文件
+//        File srcFile = new File("");
+//        File destFile = new File("");
+//
+//        //  2、造节点流,注意Reader和Writer对应的节点流是FileReader和FileWriter
+//        FileReader fr = new FileReader(srcFile);
+//        FileWriter fw = new FileWriter(destFile);
+//
+//        //  3、缓冲流,他们所对应的缓冲流分别是*BufferedReader   *BufferedWriter
+//        BufferedReader bufferedReader = new BufferedReader(fr);
+//        BufferedWriter bufferedWriter = new BufferedWriter(fw);
+
+        //  也可以写成匿名类的形式，造文件造流
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("new.txt")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("newWithBufferReader.txt")));
+
+        //  文件的读写操作,这里的BufferedReader和BufferedWriter是字符流，所以需要使用字符数组
+        char[] cbuf = new char[1024];
+        int len;
+        while ((len = bufferedReader.read(cbuf)) != -1){
+            bufferedWriter.write(cbuf,0,len);
+            //  默认的缓冲区足够大，没必要再刷新
+//            bufferedWriter.flush();
+        }
+
+        //  关闭资源
+        bufferedWriter.close();
+        bufferedReader.close();
+
+
+    }
+    @Test
+    public void testBufferedReaderBufferedWriter2() throws IOException {
+
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("new.txt")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("newWithBufferReader2.txt")));
+
+        //  文件的读写操作,这里的BufferedReader和BufferedWriter是字符流，所以需要使用字符数组
+        //  方式一：使用的char型数组
+//        char[] cbuf = new char[1024];
+//        int len;
+//        while ((len = bufferedReader.read(cbuf)) != -1){
+//            bufferedWriter.write(cbuf,0,len);
+//            //  默认的缓冲区足够大，没必要再刷新
+////            bufferedWriter.flush();
+//        }
+
+        //  方式二：使用bufferedReader.readLine(String )
+        //  bufferedReader.readLine()方法
+        //  @return     A String containing the contents of the line, not including
+        //     *             any line-termination characters, or null if the end of the
+        //     *             stream has been reached
+        String data;
+        while ((data = bufferedReader.readLine()) != null){
+            //  方法一：
+//            bufferedWriter.write(data); //  注意的是返回值里面不包括任何的换行符
+            //  注意这个bufferedReader.readLine()方法不会识别换行符，所以如果有需要自己添上
+            //  注意看文件newWithBufferReader2.txt和newWithBufferReader.txt的区别
+
+            //  方法二：自己加上换行符的两种方式
+//            bufferedWriter.write(data+"\n");
+            //  或者使用自带的方法加上换行符
+            bufferedWriter.write(data);
+            bufferedWriter.newLine();   //newLine()方法的作用就是提供换行的操作
+
+        }
+        //  关闭资源
+        bufferedWriter.close();
+        bufferedReader.close();
+
+
+
+    }
+
 }
