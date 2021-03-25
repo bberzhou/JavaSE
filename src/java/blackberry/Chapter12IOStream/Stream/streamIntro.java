@@ -39,7 +39,11 @@ public class streamIntro {
 
 
 
-
+        IO是指Input/Output，即输入和输出。以内存为中心:
+            Input指从外部读入数据到内存，例如，把文件从磁盘读取到内存，从网络读取数据到内存等等。
+            Output指把数据从内存输出到外部，例如，把数据从内存写入到文件，把数据从内存输出到网络等等。
+            IO流以byte（字节）为最小单位，因此也称为字节流。
+            在Java中，InputStream代表输入字节流，OuputStream代表输出字节流，这是最基本的两种IO流
 
 
      */
