@@ -29,6 +29,7 @@ public class FileIntro {
                 Windows： \\
                 Unix：/
                 可以用.表示当前目录，  ..表示上级目录。
+                可以使用FIle类自带的一个属性进行操作:File.separator
 
 
 
@@ -36,10 +37,11 @@ public class FileIntro {
          */
     @Test
     public void test1() {
-        //  构造器一：
+        //  构造器1 ：
         //  绝对路径
         //  注意Windows平台使用\作为路径分隔符，在Java字符串中需要用\\表示一个\。
         //  Linux平台或者URL中使用/作为路径分隔符
+        File file5 = new File ("hell.txt"); //  相当于当前module
         File file = new File("C:\\Users\\laboratory\\IdeaProjects\\JavaSE\\src\\java\\blackberry\\Chapter12IOStream\\test.txt");
 
         //  所以为了防止在不同的系统分隔符错误的问题，使用FIle类自带的一个属性进行操作:File.separator
@@ -57,19 +59,21 @@ public class FileIntro {
         //test.txt
 
 
-        //  构造器二：child可以是一个文件也可以是一个目录
-
+        //  构造器2 ：child可以是一个文件也可以是一个目录
+        //  IdeaProjects可以是个文件也可以是个文件目录
         File file2 = new File("C:\\Users\\laboratory","IdeaProjects");
         System.out.println(file2);
         //  输出结果：C:\Users\laboratory\IdeaProjects
 
 
-        //  构造器3
+        //  构造器3：file2下面的一个JavaSE 文件
         File file3 = new File(file2,"JavaSE");
         System.out.println(file3);
         //  输出结果：C:\Users\laboratory\IdeaProjects\JavaSE
 
     }
+
+
     //  文件类的常用方法
     /*
         public String getAbsolutePath()：获取绝对路径
