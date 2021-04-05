@@ -42,49 +42,69 @@ public class FileReaderWriter1 {
     }
 
     /*
+        练习一：
         使用字符流将文件写进来读出去，将hello.txt里面的文件读入，并输出到新的文件helloWrite
         不能使用字符流来处理图片等字节数据
      */
 
     @Test
-    public void test2() throws IOException {
+    public void test2() {
         //  创建文件，并实例化对应的流
-        FileReader fileReader = new FileReader (new File ("hello.txt"));
-        FileWriter fileWriter = new FileWriter (new File ("helloWrite.txt"));
-        //  定义一个字符数组
-        char[] cbuf  = new char[5];
-        //  记录每次读入到cbuf数组中的字符的个数
-        int len;
-        while ((len = fileReader.read (cbuf))!= -1){
-            //  注意，不能直接把cbuf数组的内容写入
-//            fileWriter.write (cbuf);
-            //  应该每次读入多少个就写入多少个，
-//            String str = new String (cbuf,0,len);
-//            fileWriter.write (str);
-            //  这里也可以用write的另外一个构造器方法
-            fileWriter.write (cbuf,0,len);
+        FileReader fileReader = null;
+        FileWriter fileWriter = null;
+        try {
+            fileReader = new FileReader (new File ("hello.txt"));
+            fileWriter = new FileWriter (new File ("helloWrite.txt"));
+            //  定义一个字符数组
+            char[] cbuf  = new char[5];
+            //  记录每次读入到cbuf数组中的字符的个数
+            int len;
+            while ((len = fileReader.read (cbuf))!= -1){
+                //  错误写法：注意，不能直接把cbuf数组的内容写入
+    //            fileWriter.write (cbuf);
+
+                //  写法一：应该每次读入多少个就写入多少个，
+    //            String str = new String (cbuf,0,len);
+    //            fileWriter.write (str);
+
+                //  写法二：这里也可以用write的另外一个构造器方法，每次写出len个字符
+                fileWriter.write (cbuf,0,len);
+            }
+        } catch (IOException e) {
+            e.printStackTrace ();
+        } finally {
+            //  关闭流
+            try {
+                fileWriter.close ();
+            } catch (IOException e) {
+                e.printStackTrace ();
+            }
+            try {
+                fileReader.close ();
+            } catch (IOException e) {
+                e.printStackTrace ();
+            }
         }
-        //  关闭流
-        fileWriter.close ();
-        fileReader.close ();
 
     }
 
+    //  练习二：
     //  使用字节流FileInputStream和FileOutputStream实现对Photo照片的复制操作
+    //  使用字节流完成文件的输入输出操作
     @Test
     public void test3() throws IOException {
-        //  实例化流
+        //  实例化流，创建输入流和输出流的对象
         FileInputStream fileInputStream = new FileInputStream (new File ("Photo.jpg"));
-        FileOutputStream fileOutputStream = new FileOutputStream (new File ("PhotoCopy.jpg"));
+        FileOutputStream fileOutputStream = new FileOutputStream (new File ("CopyPhoto.jpg"));
 
-        //  读取数据
+        //  数据的读入和写出操作
         byte[] buffer = new byte[5];
         int len;    //  记录每次读取的字节的长度
         while ((len = fileInputStream.read (buffer)) != -1){
-            String str = new String (buffer,0,len);
-            System.out.print (str);
-
-        }fileInputStream.close ();
+            fileOutputStream.write (buffer,0,len);
+        }
+        //  关闭流的操作
+        fileInputStream.close ();
         fileOutputStream.close ();
 
     }
