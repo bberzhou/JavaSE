@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @date: 3/30/21 10:13 PM
  * Create By IntelliJ IDEA
  */
-public class FileReaderWriter {
+public class FileReaderWriterChar {
        /*
         输入input：读取外部数据（磁盘、光盘等存储设备的数据）到内存中去
         输出output：将程序（内存中）的数据输出到磁盘、光盘等存储设备中去
@@ -62,11 +62,11 @@ public class FileReaderWriter {
         3。流的角色的不同：节点流、处理流
 
     二、流的体系结构
-        抽象基类                    节点流(文件流)                处理流（缓冲流）
-        InputStream             FileInputStream             BufferedInputStream
-        OutputStream            FileOutputStream            BufferedOutputStream
-        Reader                  FileReader                  BufferReader
-        Writer                  FileWriter                  BufferWriter
+        抽象基类                    节点流(文件流)                                    处理流（缓冲流）
+   字符  InputStream             FileInputStream (read(byte[] buffer))             BufferedInputStream (read(byte[] buffer))
+        OutputStream            FileOutputStream (write(byte[] buffer,0,len))     BufferedOutputStream (write(byte[] buffer,0,len))
+   字节  Reader                  FileReader (read(char[] cbuf))                    BufferReader  (read(char[] cbuf)/ readLine())
+        Writer                  FileWriter (write(char[] cbuf,0,len))             BufferWriter (write(char[] cbuf,0,len))
 
         抽象类定义的一个最重要的方法就是int read():
         public abstract int read() throws IOException;

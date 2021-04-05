@@ -10,7 +10,7 @@ import java.io.*;
  * @date: 4/5/21 10:35 AM
  * Create By IntelliJ IDEA
  */
-public class FileInputOutputStream {
+public class FileInputOutputStreamByte {
     /*
         测试FileInputSteam和FileOutputStream的使用。
         总结：

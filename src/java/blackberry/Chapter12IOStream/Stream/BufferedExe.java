@@ -33,7 +33,7 @@ public class BufferedExe {
 //        FileInputStream fis = new FileInputStream("newSrc.jpg");
         FileOutputStream fos = new FileOutputStream(new File("srcSecret.jpg"));
 
-        byte[] buffer = new byte[20];
+        byte[] buffer = new byte[30];
         int len;
         while ((len = fis.read(buffer)) != -1) {
             //  对字节数据进行修改以体现加密
@@ -109,7 +109,7 @@ public class BufferedExe {
         //  1、创建流
         FileReader fr = new FileReader(new File("new.txt"));
 
-        //  2、创建一个Map集合
+        //  2、创建一个Map集合,Character存放字符，Integer存放个数
         Map<Character, Integer> map = new HashMap<>();
 
         //  3、遍历每一个字符，每一个字符出现的次数放到map中
@@ -124,7 +124,8 @@ public class BufferedExe {
                 //  如果没出现过，就把它添加到map中
                 map.put(ch, 1);
             } else {
-                //  如果存在，则进行加1操作
+                //  如果存在，则进行加1操作，因为map在存放相同key的元素时，
+                //  会自动把相同key的前一个value值覆盖掉
                 map.put(ch, map.get(ch) + 1);
             }
         }
@@ -136,10 +137,11 @@ public class BufferedExe {
         for (Map.Entry<Character, Integer> entry :
                 entries) {
             switch (entry.getKey()) {
-                //  制表符的情况
                 case ' ':
+                    //
                     bufferedWriter.write("空格=" + entry.getKey());
                     break;
+                    //   制表符的情况
                 case '\t':
                     bufferedWriter.write("tab键="+entry.getValue());
                 case '\r':
