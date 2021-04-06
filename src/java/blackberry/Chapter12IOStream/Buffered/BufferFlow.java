@@ -18,7 +18,7 @@ public class BufferFlow {
             BufferedWriter
             BufferedReader
        2、缓冲流的作用：提高流的读取、写入的速度
-            提高读写速度的原因是：内部提供了一个缓冲区
+            提高读写速度的原因是：内部提供了一个缓冲区，默认情况下是8192
        3、处理流就是套接在已有的流的基础上
      */
 
@@ -107,6 +107,7 @@ public class BufferFlow {
         }
     }
 
+        // 测试copyFileWithBuffered()方法
     @Test
     public void testcopyFileWithBuffered(){
         long start = System.currentTimeMillis ();
