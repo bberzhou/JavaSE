@@ -1,4 +1,4 @@
-package blackberry.Chapter12IOStream;
+package blackberry.Chapter13IOStream;
 
 import java.io.Serializable;
 

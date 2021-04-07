@@ -1,9 +1,8 @@
-package blackberry.Chapter12IOStream;
+package blackberry.Chapter13IOStream;
 
 import org.junit.Test;
 
 import java.io.*;
-import java.util.Scanner;
 
 /**
  * @Description:

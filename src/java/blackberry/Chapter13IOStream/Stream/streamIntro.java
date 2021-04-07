@@ -1,4 +1,4 @@
-package blackberry.Chapter12IOStream.Stream;
+package blackberry.Chapter13IOStream.Stream;
 
 public class streamIntro {
     /*

@@ -1,4 +1,4 @@
-package blackberry.Chapter12IOStream;
+package blackberry.Chapter13IOStream;
 
 import org.junit.Test;
 
@@ -56,7 +56,6 @@ public class ObjectSerializableTest {
                 e.printStackTrace ();
             }
         }
-
 
 
     }

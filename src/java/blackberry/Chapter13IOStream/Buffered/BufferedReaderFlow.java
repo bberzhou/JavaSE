@@ -1,4 +1,4 @@
-package blackberry.Chapter12IOStream.Buffered;
+package blackberry.Chapter13IOStream.Buffered;
 
 import org.junit.Test;
 

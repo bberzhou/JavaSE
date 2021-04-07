@@ -1,4 +1,4 @@
-package blackberry.Chapter12IOStream.File;
+package blackberry.Chapter13IOStream.File;
 
 import java.io.File;
 import java.io.FilenameFilter;
