@@ -63,7 +63,7 @@ public class TCPTest1 {
             //  accept方法： Listens for a connection to be made to this socket and accepts it.
             //  The method blocks until a connection is made.
 
-            //  2、调用accept()方法，表示来自于客户端的socket
+            //  2、调用accept()方法，表示接收来自于客户端的socket
             socket = serverSocket.accept ();
 
             //  3、获取输入流

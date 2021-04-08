@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.io.*;
 import java.net.InetAddress;
+import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
@@ -35,14 +36,37 @@ public class TCPTest2 {
             outputStream.write (buffer,0,len);
         }
 
-
-
         //  4、关闭资源
+        fileInputStream.close ();
+        outputStream.close ();
+        socket.close ();
 
     }
 
+    //  服务器端
     @Test
-    public void Server(){
+    public void Server() throws IOException {
+        //  1、创建服务器端的ServerSocket，并且指明自己的端口号
+        ServerSocket serverSocket = new ServerSocket (8859);
+        //  2、调用accept()方法，表示接收来自于客户端的socket
+        Socket socket = serverSocket.accept ();
+        //  3、获取输入流
+        InputStream inputStream = socket.getInputStream ();
+
+        //  4、输出到指定文件
+        FileOutputStream fileOutputStream = new FileOutputStream (new File ("PhotoSocket.jpg"));
+        byte[] buffer = new byte[1024];
+        int len;
+        while ((len = inputStream.read (buffer)) != -1){
+            // 5、 输出流写入
+            fileOutputStream.write (buffer,0,len);
+        }
+        //  6、关闭资源
+        fileOutputStream.close ();
+        inputStream.close ();
+        socket.close ();
+        serverSocket.close ();
+
 
     }
 }
