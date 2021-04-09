@@ -33,6 +33,7 @@ public class PersonSerializable implements Serializable {
     反序列化时不调用构造方法，可设置serialVersionUID作为版本号（非必需）
     Java的序列化机制仅适用于Java，如果需要与其它语言交换数据，必须使用通用的序列化方法，例如JSON。
 
+
      */
     public static final long serialVersionUID = 8989890L;
 //    private static String name;

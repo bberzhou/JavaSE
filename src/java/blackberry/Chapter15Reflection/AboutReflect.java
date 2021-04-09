@@ -1,4 +1,4 @@
-package blackberry.Reflection;
+package blackberry.Chapter15Reflection;
 
 /**
  * @author bberzhou@gmail.com
@@ -7,8 +7,33 @@ package blackberry.Reflection;
  */
 public class AboutReflect {
     /*
-        反射就是Reflection,Java的反射是指程序在运行期，可以拿到一个对象的所有信息
-        反射是为了解决在运行期，对某个实例一无所知的情况下，如何调用其方法
+        1、反射就是Reflection,Java的反射是指程序在运行期，可以拿到一个对象的所有信息
+            反射是为了解决在运行期，对某个实例一无所知的情况下，如何调用其方法，
+            借助反射能够直接操作任意对象的内部属性和方法
+
+        2、重点：
+            1、理解Class类并获取Class实例
+            2、创建运行时类的对象
+            3、调用运行时类的指定结构
+            4、反射的应用：动态代理
+
+
+        3、Java反射机制提供的功能
+            在运行时判断任意一个对象所属的类
+            在运行时构造任意一个类的对象
+            在运行时判断任意一个类所具有的成员变量和方法
+            在运行时获取泛型信息
+            在运行时调用任意一个对象的成员变量和方法
+            在运行时处理注解
+            生成动态代理
+
+         4、反射相关的主要API
+            java.lang.Class：代表一个类
+            java.lang.reflect.Method：代表类的方法
+            java.lang.reflect.Filed：代表类的成员变量
+            java.lang.reflect.Constructor:代表类的构造器
+
+
 
 
 

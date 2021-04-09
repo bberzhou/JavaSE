@@ -14,6 +14,8 @@ public class ObjectSerializableTest {
     //  先将自定义类序列化存进文件
     @Test
     public void testObjectOutput(){
+        //  序列化操作
+
         ObjectOutputStream objectOutputStream = null;
         try {
             objectOutputStream = new ObjectOutputStream (new FileOutputStream ("Object.dat"));
@@ -35,6 +37,7 @@ public class ObjectSerializableTest {
     //  反序列化读取文件中的自定义类对象和基本数据类型
     @Test
     public void testObjectInput(){
+        //  反序列化操作
         ObjectInputStream objectInputStream = null;
         try {
             objectInputStream = new ObjectInputStream (new FileInputStream ("Object.dat"));

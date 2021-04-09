@@ -103,7 +103,5 @@ public class TCPTest3 {
         inputStream.close ();
         socket.close ();
         serverSocket.close ();
-
-
     }
 }
