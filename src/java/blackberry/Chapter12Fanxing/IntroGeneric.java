@@ -70,7 +70,7 @@ public class IntroGeneric {
      *                  Class father<T1, T2>{}
      *                  子类不保留父类的类型
      *                  1）没有类型 擦除
-     *                    class son1 extends father{} 等价于 class son1 extends father<Object, Object>
+     *                    class son1 extends father {} 等价于 class son1 extends father<Object, Object>
      *                  2)具体类型
      *                    class son2 extends father<String, Integer>{}
      *                  子类保留父类的类型
