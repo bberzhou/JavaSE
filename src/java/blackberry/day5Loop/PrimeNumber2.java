@@ -17,8 +17,8 @@ public class PrimeNumber2 {
         long startTime = System.currentTimeMillis ();
         //  遍历10000以内的自然数
         la:
-        for (int i = 2 ; i < 10000 ; i++) {
-            for (int j = 2 ; j < Math.sqrt (i) ; j++) {
+        for (int i = 2 ; i < 10000000 ; i++) {
+            for (int j = 2 ; j <=Math.sqrt (i) ; j++) {
                 //  i能够被2到i-1之间的数整除
                 if (i % j == 0) {
                     //  当能够除尽的时候，不用继续内层循环，直接跳转到外层的循环

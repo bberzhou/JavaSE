@@ -5,7 +5,7 @@ package blackberry.day3;
  * @date 3/21/20 18:12
  * Create By IntelliJ IDEA
  */
-public class OpratorTest {
+public class OperatorTest {
     public static void main (String[] args) {
         int i1 = 10;
         int i2 = 20;

@@ -1,6 +1,5 @@
 package blackberry.Chapter15Reflection.ReflectionStruc;
 
-import blackberry.Chapter10EnumAndAnnotation.aboutAnnotation.MyAnnotation;
 
 /**
  * @Description:

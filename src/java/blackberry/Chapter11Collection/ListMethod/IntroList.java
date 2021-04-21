@@ -67,8 +67,8 @@ public class IntroList {
      *              ArrayList和LinkedList的常用比较：
      *          	         ArrayList	LinkedList
      *      获取指定元素	        速度很快	    需要从头开始查找元素
-     *      添加元素到末尾	    速度很快	    速度很快
-     *      在指定位置添加/删除	需要移动元素	不需要移动元素
+     *      添加元素到末尾	       速度很快	    速度很快
+     *      在指定位置添加/删除	   需要移动元素	不需要移动元素
      *      内存占用	               少	            较大
      *      通常情况下使用ArrayList较多
      *

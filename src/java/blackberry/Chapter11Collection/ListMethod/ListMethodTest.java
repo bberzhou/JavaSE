@@ -30,8 +30,8 @@ public class ListMethodTest {
      *          改：set(int index, Object obj)
      *          查: get(int index)
      *          插：add(int index,Object obj)
-     *          长度：size()
-     *          遍历：① iterator迭代器方式
+     *         长度：size()
+     *         遍历：① iterator迭代器方式
      *                ②增强for循环，foreach
      *                ③普通for循环
      *

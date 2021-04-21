@@ -9,6 +9,7 @@ import java.io.Serializable;
  * Create By IntelliJ IDEA
  */
 public class Creature<T> implements Serializable {
+    //  带泛型的父类还实现了Serializable接口
     private char gender;
     public double weight;
     private void breath(){

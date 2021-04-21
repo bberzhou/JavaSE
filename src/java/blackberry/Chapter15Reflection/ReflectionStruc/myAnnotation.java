@@ -16,7 +16,8 @@ import java.lang.annotation.Target;
 @Target ({ElementType.TYPE,ElementType.METHOD,ElementType.PARAMETER,ElementType.CONSTRUCTOR,ElementType.LOCAL_VARIABLE})
 @Retention (RetentionPolicy.RUNTIME)
 
-//@Retention (RetentionPolicy.CLASS)      //  如果这里改成CLASS，在MethodTest类里面的test2就不能获取到Pop类里面方法的注解信息
+//@Retention (RetentionPolicy.CLASS)
+//  如果这里改成CLASS，在MethodTest类里面的test2就不能获取到Pop类里面方法的注解信息
 public @interface myAnnotation {
     String value() default "hello";
 
