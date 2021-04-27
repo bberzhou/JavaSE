@@ -3,7 +3,6 @@ package blackberry.Chapter11Collection;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import javax.jnlp.ClipboardService;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
