@@ -158,7 +158,7 @@ public class ReflectionTest {
      */
     @Test
     public void testClassInstance() throws ClassNotFoundException {
-        //  方式一:
+        //  方式一:运行时类的属性：.class 属性
         Class<Person> clazz1 =Person.class;
         System.out.println (clazz1);
         //  class blackberry.Chapter15Reflection.Person，这里输出的就是当前Person类本身

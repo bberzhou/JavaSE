@@ -23,6 +23,7 @@ package blackberry.Chapter15Reflection.ReflectionStruc;
     //  这里继承父类的泛型指定具体的类型，还可以添加注解，注解修饰类
 @myAnnotation(value = "hi")
 public class Pop extends Creature<String> implements Comparable<String>,myInterface{
+    //  不同权限大小的属性
     private String name;
     int age;
     public int id;
