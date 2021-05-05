@@ -9,7 +9,7 @@ import java.io.Serializable;
  * Create By IntelliJ IDEA
  */
 
-//  Creature类是Pop类的父类
+//  Creature类是Pop类的父类，带有泛型，且继承了接口
 public class Creature<T> implements Serializable {
     //  带泛型的父类还实现了Serializable接口
     //  char类型的性别

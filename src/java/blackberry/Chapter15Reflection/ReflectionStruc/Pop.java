@@ -66,4 +66,13 @@ public class Pop extends Creature<String> implements Comparable<String>,myInterf
     public int compareTo (String o) {
         return 0;
     }
+
+    @Override
+    public String toString () {
+        return "Pop{" +
+            "name='" + name + '\'' +
+            ", age=" + age +
+            ", id=" + id +
+            '}';
+    }
 }

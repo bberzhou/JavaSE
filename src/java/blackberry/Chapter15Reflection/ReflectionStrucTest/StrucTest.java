@@ -3,6 +3,7 @@ package blackberry.Chapter15Reflection.ReflectionStrucTest;
 import blackberry.Chapter15Reflection.ReflectionStruc.Pop;
 import org.junit.Test;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -18,7 +19,7 @@ public class StrucTest {
         调用运行时类中的指定的结构：属性、方法、构造器
      */
 
-    //  不要去掌握
+    //  不要求掌握---->constructor
     @Test
     public void test1() throws NoSuchFieldException, IllegalAccessException, InstantiationException {
 
@@ -80,8 +81,8 @@ public class StrucTest {
         show.setAccessible (true);
 
         /*
-                4、调用方法,方法名.invoke(参数1，指明对象即方法的调用者；参数2，给形参赋值的形参)
-                invoke()方法是有返回值的，返回值即为对应类中调用的方法的返回值,并且默认为一个Object类型的
+            4、调用方法,方法名.invoke(参数1，指明对象即方法的调用者；参数2，给形参赋值的形参)
+              invoke()方法是有返回值的，返回值即为对应类中调用的方法的返回值,并且默认为一个Object类型的
          */
         Object o = show.invoke (pop, "我是反射调用");
         System.out.println (o); //  我是反射调用
@@ -91,13 +92,30 @@ public class StrucTest {
         Method showDesc = popClass.getDeclaredMethod ("showDesc");
         //  设置Accessible
         showDesc.setAccessible (true);
+
+
         //  注意调用静态的方法，传入的参数,    类型是： Pop.class
         Object invoke = showDesc.invoke (Pop.class);
-        // 返回值,这里静态放啊没有返回值，默认就是Null
+        // 返回值,这里静态方法没有返回值，默认就是Null
         System.out.println (invoke);
 
 
     }
+    @Test
+    public void testConstructor() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+        Class<Pop> popClass = Pop.class;
 
+        //  1、获取指定的构造器
+        Constructor<Pop> declaredConstructor = popClass.getDeclaredConstructor (String.class);
+
+        //  2、保证此构造器是可以访问的
+        declaredConstructor.setAccessible (true);
+
+        //  3. 调用此构造器创建运行时类的对象，大多数的情况也会直接使用空参构造器
+        Pop tome = declaredConstructor.newInstance ("Tome");
+        //  这里重写了Pop类里面的toString方法
+        System.out.println (tome);
+
+    }
 
 }

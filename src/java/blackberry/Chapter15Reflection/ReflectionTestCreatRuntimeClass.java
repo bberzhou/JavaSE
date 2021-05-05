@@ -44,7 +44,7 @@ public class ReflectionTestCreatRuntimeClass {
     //  体会反射的动态性，只有在运行的时候才会真正知道造的是那个类的对象
     @Test
     public void testDynamic() throws IllegalAccessException, ClassNotFoundException, InstantiationException {
-        int num  = new Random ().nextInt (3);   //  返回3以内的整数 0,1,2
+        int num  = new Random ().nextInt (3);   //  返回3以内的整数 0,1,2，
         String classPath = "";
         switch (num){
             case 0:
