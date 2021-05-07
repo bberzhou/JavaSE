@@ -154,7 +154,9 @@ public class ReflectionTest {
     }
 
     /*
-        // 如何获取Class的实例，即相当于获取类对象的实例
+         如何获取Class的实例，即相当于获取类对象的实例
+         获取Class实例的方式，前三种需要掌握
+
      */
     @Test
     public void testClassInstance() throws ClassNotFoundException {
