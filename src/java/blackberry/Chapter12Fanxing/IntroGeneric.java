@@ -18,8 +18,8 @@ public class IntroGeneric {
      *      集合容器类在设计阶段、声明阶段不能确定这个容器到底实际存的是什么类型的对象
      *      在JDK5.0之前只能把元素设计欸Object类型的，JDK5.0之后就用泛型来解决这个问题
      *
-     *      所谓泛型就是允许定义类、接口时通过一个标识表示类中某个属性的类型或某个方法
-     *      的返回值以及参数类型。这个类型参数将在使用时（例如：继承或实现这个接口，用这个类型声明变量、创建对象的时候）确定
+     *      所谓泛型就是允许定义类、接口时通过一个标识表示类中某个属性的类型或某个方法的返回值以及参数类型。
+     *      这个类型参数将在使用时（例如：继承或实现这个接口，用这个类型声明变量、创建对象的时候）确定
      *      （即传入实际的参数类型，也称为类型实参）
      *
      *      与直接使用Object相比有什么优点
@@ -33,15 +33,15 @@ public class IntroGeneric {
      *           ③指明完以后，在集合类或接口中凡是定义类或接口时，内部结构（比如：方法、构造器、属性等）使用到类的泛型的位置，都指定为实例化的泛型类型
      *              比如：add(Object e)---->实例化以后：add(Integer i)
      *           ④注意点：泛型的类型必须是一个类，不能是基本数据类型，需要用到基本数据类型的地方，都要拿包装类替换掉
-     *           ⑤ArrayList arrayList = new ArrayList();这样使用在IDEA中没有报错，在实例化的时候没有指明
-     *              泛型，默认类型就是java.lang.Object类型的
+     *           ⑤ArrayList arrayList = new ArrayList();这样使用在IDEA中没有报错，在实例化的时候没有指明泛型，
+     *                  默认类型就是java.lang.Object类型的
      *           ⑥JDK7开始有一个新的特性：ArrayList<Integer> arrayList = new ArrayList<Integer>()
      *              类型推断，可以简写成为：ArrayList<Integer> arrayList = new ArrayList<>()
      *
      *  3、如何自定义泛型结构
      *      泛型类；
-     *      泛型接口
-     *      泛型方法
+     *      泛型接口:
+     *      泛型方法:
      *      参见：GenericClassTest
      *
      *      注意点：1、泛型类可能有多个参数，此时应将多个参数一起放在尖括号内，比如<E1,E2,E3>
@@ -112,8 +112,7 @@ public class IntroGeneric {
         arrayList.add("KKK");
 
 
-        for (Object o :
-                arrayList) {
+        for (Object o : arrayList) {
 //            int stuScore = (int ) o;
             //  问题二：如果在已知是整数类型的参数时，想要输出分数score，此时就会报错
             //  强转时就出现类型转换异常

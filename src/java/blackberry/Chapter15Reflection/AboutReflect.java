@@ -34,23 +34,20 @@ public class AboutReflect {
             java.lang.reflect.Constructor:代表类的构造器
 
 
-
-
-
      */
 
     public static void main (String[] args) throws ClassNotFoundException {
         Number n = new Double (12.22);  //  ok
 //        class（包括interface）的本质是数据类型(Type)，无继承关系的数据类型无法赋值
 
-//        String s = new Double (123.22); //  报错
+//        String s = new Double (123.22); //  报错,这里没有继承关系
 
 //        当JVM加载String类时，它首先读取String.class文件到内存，然后，为String类创建一个Class实例并关联起来
 //        Class cl = new Class(String);
         /*
             由于JVM为每个加载的class创建了对应的Class实例，并在实例中保存了该class的所有信息，
             包括类名、包名、父类、实现的接口、所有方法、字段等，
-            因此，如果获取了某个Class实例，我们就可以通过这个Class实例获取到该实例对应的class的所有信息。
+            因此，如果获取了某个Class实例，我们就可以通过这个Class实例获取到该实例对应的class（类）的所有信息。
             这种通过Class实例获取class信息的方法称为反射（Reflection）
          */
 

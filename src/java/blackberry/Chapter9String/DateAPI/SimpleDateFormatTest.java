@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @date: 11/20/20 20:52
  * Create By IntelliJ IDEA
  */
-public class SimpleDateFormatTest {
+public class  SimpleDateFormatTest {
     /**
      * SimpleDateFormat的使用：SimpleDateFormat对日期Date类的格式化和解析
      * 1。两个操作：
