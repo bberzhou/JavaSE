@@ -118,7 +118,7 @@ public class aboutMapMethods {
         map.put("BB",7899);
         map.put("CC",88);
         map.put(45,889);
-        //  一、keySet方法获取当前map的或有key值
+        //  一、keySet方法获取当前map的所有key值
 //        Set key = map.keySet();
 //        Iterator iterator = key.iterator();
 //        //  遍历所有的键值

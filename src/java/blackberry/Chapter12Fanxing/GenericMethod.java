@@ -3,6 +3,7 @@ package blackberry.Chapter12Fanxing;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class GenericMethod {
@@ -37,7 +38,5 @@ public class GenericMethod {
                 integers) {
             System.out.println(i);
         }
-
-
     }
 }

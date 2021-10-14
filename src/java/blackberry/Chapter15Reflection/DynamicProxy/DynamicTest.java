@@ -18,7 +18,7 @@ public class DynamicTest {
     public static void main(String[] args){
         //  动态代理的实现实例
 
-        //  一、先创建一个代理类的对象
+        //  一、先创建一个bei代理类的对象
         Superman superman = new Superman ();
 
         //  二、使用代理工厂，返回一个代理类的对象，proxyInstance，这里因为superman是实现的Human接口，所以返回的代理类相当于是Human接口的对象
